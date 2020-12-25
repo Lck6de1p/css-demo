@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>water-ball</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="state-ball" style="--offset: 0;">
+        <div class="wave"></div>
+        <div class="progress"></div>
+    </div>
+</body>
+
+<script>
+    let box = document.getElementsByClassName('state-ball')[0];
+    let progress = 0;
+    let trendIsUp = true;
+    setInterval(() => {
+        if (trendIsUp) {
+            if (progress < 100) {
+                progress++;
+            } else {
+                trendIsUp = false;
+            }
+        } else {
+            if (progress > 0) {
+                progress--;
+            } else {
+                trendIsUp = true;
+            }
+        }
+        box.style = `--offset: ${progress}`;
+    }, 100)
+
+</script>
+</html>
