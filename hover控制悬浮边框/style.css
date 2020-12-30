@@ -1,0 +1,22 @@
+body {
+  height: 100vh;
+}
+
+.button {
+  width: 200px;
+  height: 80px;
+  background: linear-gradient(0, #66f 2px, #66f 2px) no-repeat left top/0 2px, linear-gradient(90deg, #66f 2px, #66f 2px) no-repeat right top/2px 0, linear-gradient(180deg, #66f 2px, #66f 2px) no-repeat right bottom/0 2px, linear-gradient(270deg, #66f 2px, #66f 2px) no-repeat left bottom/2px 0;
+  cursor: pointer;
+  line-height: 80px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+  color: #66f;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.button:hover {
+  background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
+}
+/*# sourceMappingURL=style.css.map */
