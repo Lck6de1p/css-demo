@@ -3,13 +3,14 @@ body {
 }
 
 $color: #66f;
+$bg: linear-gradient($color, $color);
 .button {
     width: 200px;
     height: 80px;
-    background: linear-gradient(0, $color, $color) no-repeat left top/0 2px,
-		linear-gradient(90deg, $color, $color) no-repeat right top/2px 0,
-		linear-gradient(180deg, $color, $color) no-repeat right bottom/0 2px,
-        linear-gradient(270deg, $color, $color) no-repeat left bottom/2px 0;
+    background: $bg no-repeat left top/0 2px,
+        $bg no-repeat right top/2px 0,
+        $bg no-repeat right bottom/0 2px,
+        $bg no-repeat left bottom/2px 0;
         // background: [image] [repeat] [positon]/[size]
     cursor: pointer;
     line-height: 80px;
