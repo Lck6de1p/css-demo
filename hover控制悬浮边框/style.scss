@@ -6,10 +6,10 @@ $color: #66f;
 .button {
     width: 200px;
     height: 80px;
-    background: linear-gradient(0, $color 2px, $color 2px) no-repeat left top/0 2px,
-		linear-gradient(90deg, $color 2px, $color 2px) no-repeat right top/2px 0,
-		linear-gradient(180deg, $color 2px, $color 2px) no-repeat right bottom/0 2px,
-        linear-gradient(270deg, $color 2px, $color 2px) no-repeat left bottom/2px 0;
+    background: linear-gradient(0, $color, $color) no-repeat left top/0 2px,
+		linear-gradient(90deg, $color, $color) no-repeat right top/2px 0,
+		linear-gradient(180deg, $color, $color) no-repeat right bottom/0 2px,
+        linear-gradient(270deg, $color, $color) no-repeat left bottom/2px 0;
         // background: [image] [repeat] [positon]/[size]
     cursor: pointer;
     line-height: 80px;
