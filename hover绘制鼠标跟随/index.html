@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>hover绘制鼠标跟随</title>
+</head>
+<body class="flex-ct-x">
+    <div class="container"></div>
+</body>
+
+<script>
+    let ul = document.createElement('ul')
+    let container = document.querySelector('.container')
+    for (let i = 0; i < 1000; i++) {
+        let li = document.createElement('li')
+        ul.appendChild(li)
+    }
+    container.appendChild(ul)
+</script>
+</html>
