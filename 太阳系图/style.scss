@@ -12,6 +12,13 @@ $pluto-orbital: 780px; $pluto-planet: 3px;       //水星轨道和星球半径
 
 $asteroids-belt-orbital : 300px; $asteroids-belt-planet: 210px; // 小行星带
 
+
+$year-in-second: 30; // 30s = 地球一年
+
+@function revolution($pl-year-in-days) {
+  @return $pl-year-in-days * $year-in-second / 365 + s
+}
+
 @function alphaRandom() {
   @return random(1000) * .001;
 }
@@ -24,7 +31,14 @@ $asteroids-belt-orbital : 300px; $asteroids-belt-planet: 210px; // 小行星带
   }
   @return unquote($stars);
 }
-
+@keyframes rolate {
+  from {
+    transform: rotate(0)
+  }
+  to {
+    transform: rotate(-360deg)
+  }
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -80,6 +94,7 @@ body {
   height: $mercury-orbital;
   margin-top: -$mercury-orbital / 2;
   margin-left: -$mercury-orbital / 2;
+  animation: rolate revolution(87.5) linear infinite;
   &::before {
     width: $mercury-planet;
     height: $mercury-planet;
@@ -95,6 +110,7 @@ body {
   height: $venus-orbital;
   margin-top: -$venus-orbital / 2;
   margin-left: -$venus-orbital / 2;
+  animation: rolate revolution(224.7) linear infinite;
   &::before {
     width: $venus-planet;
     height: $venus-planet;
@@ -110,6 +126,7 @@ body {
   height: $earth-orbital;
   margin-top: -$earth-orbital / 2;
   margin-left: -$earth-orbital / 2;
+  animation: rolate revolution(365) linear infinite;
   &::before {
     height:$earth-planet;
     width:$earth-planet;
@@ -129,6 +146,7 @@ body {
     margin-top: -9px;
     border-radius: 100px;
     box-shadow: 0 -10px 0 -8px grey;
+    animation: rolate revolution(27) linear infinite;
   }
 }
 
@@ -138,6 +156,7 @@ body {
   height: $mars-orbital;
   margin-top: -$mars-orbital / 2;
   margin-left: -$mars-orbital / 2;
+  animation: rolate revolution(687) linear infinite;
   &::before {
     width: $mars-planet;
     height: $mars-planet;
@@ -153,6 +172,7 @@ body {
   height: $jupiter-orbital;
   margin-top: -$jupiter-orbital / 2;
   margin-left: -$jupiter-orbital / 2;
+  animation: rolate revolution(4331) linear infinite;
   &::before {
     width: $jupiter-planet;
     height: $jupiter-planet;
@@ -168,6 +188,7 @@ body {
   height: $saturn-orbital;
   margin-top: -$saturn-orbital / 2;
   margin-left: -$saturn-orbital / 2;
+  animation: rolate revolution(10747) linear infinite;
   &::before {
     width: $saturn-planet;
     height: $saturn-planet;
@@ -195,6 +216,7 @@ body {
   height: $uranus-orbital;
   margin-top: -$uranus-orbital / 2;
   margin-left: -$uranus-orbital / 2;
+  animation: rolate revolution(30589) linear infinite;
   &::before {
     width: $uranus-planet;
     height: $uranus-planet;
@@ -210,6 +232,7 @@ body {
   height: $neptune-orbital;
   margin-top: -$neptune-orbital / 2;
   margin-left: -$neptune-orbital / 2;
+  animation: rolate revolution(59802) linear infinite;
   &::before {
     width: $neptune-planet;
     height: $neptune-planet;
@@ -225,6 +248,7 @@ body {
   height: $pluto-orbital;
   margin-top: -$pluto-orbital / 2 - 60;
   margin-left: -$pluto-orbital / 2 + 70;
+  animation: rolate revolution(90580) linear infinite;
   &::before {
     width: $pluto-planet;
     height: $pluto-planet;
@@ -243,6 +267,7 @@ body {
   margin-left: -$asteroids-belt-orbital / 2;
   opacity: .7;
   overflow: hidden;
+  animation: rolate revolution(2191) linear infinite;
   &::before {
     top: 50%;
     height: $asteroids-belt-planet;
